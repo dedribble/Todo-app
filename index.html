@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>What's for today | TODO APP</title>
+</head>
+<body>
+    <h1>TODO LIST</h1>
+
+    <input type="text" placeholder="Today's task" id="tasks">
+    
+    <button onclick="display()">Save</button>
+
+    
+    
+    <div class="task-list">
+        <h2>Today's task(s)</h2>
+        <div>
+            <input type="checkbox" id="task-one" value="task-one" name="task-list" class="cancel">
+            <label for="task-one" id="task-one-label"></label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="task-two" value="task-two" name="task-list" class="cancel">
+            <label for="task-two" id="task-two-label"></label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="task-three" value="task-three" name="task-list" class="cancel">
+            <label for="task-three" id="task-three-label"></label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="task-four" value="task-four" name="task-list" class="cancel">
+            <label for="task-four" id="task-four-label"></label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="task-five" value="task-five" name="task-list" class="cancel">
+            <label for="task-five" id="task-five-label"></label>
+        </div>
+    </div>
+        
+    
+    <script src="complete.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
