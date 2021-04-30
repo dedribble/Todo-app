@@ -25,9 +25,15 @@ input#tasks {
     margin-bottom: 20px;
 }
 
+
+
 .task-list{
     display: flex;
     flex-direction: column;
+}
+
+.task-list > div > input:checked + label {
+    text-decoration: line-through;
 }
 
 

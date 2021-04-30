@@ -1,8 +1,4 @@
-function complete () {
-
-    let completeTask = document.querySelector('input').checked;
-    
-    document.querySelector('label').style.textDecoration = "line-through";
-
-
-}
+let input = document.createElement('input');
+x.setAttribute('type', 'checkbox');
+let label = document.createElement('label');
+let content = 
