@@ -7,9 +7,11 @@ save.addEventListener('click', function display () {
     listOfTasks.push(task);
 
     for (index = 0; index < listOfTasks.length; index++) {
+
         if (index === 0) {
             document.getElementById('task-one-label').innerHTML = listOfTasks[0];
         }
+
         if (index === 1) {
             document.getElementById('task-two-label').innerHTML = listOfTasks[1];
         }
@@ -26,7 +28,7 @@ save.addEventListener('click', function display () {
         }
     }
     
-        
     });
+
  
 
