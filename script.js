@@ -1,34 +1,32 @@
 let listOfTasks = []
 const save = document.querySelector('button');
+const box = document.createElement('div');
+const header = document.createElement('h1')
+const text = document.createTextNode("Today's Task")
+const taskBox = document.createElement('section')
+const task = document.createElement('p')
 
-save.addEventListener('click', function display () {
-    let task = document.getElementById('tasks').value;
+save.addEventListener('click', (e)=> {
+    e.preventDefault();
 
-    listOfTasks.push(task);
-
-    for (index = 0; index < listOfTasks.length; index++) {
-
-        if (index === 0) {
-            document.getElementById('task-one-label').innerHTML = listOfTasks[0];
-        }
-
-        if (index === 1) {
-            document.getElementById('task-two-label').innerHTML = listOfTasks[1];
-        }
-
-        if (index === 2) {
-            document.getElementById('task-three-label').innerHTML = listOfTasks[2];
-        }
-
-        if (index === 3) {
-            document.getElementById('task-four-label').innerHTML = listOfTasks[3];
-        }
-        if (index === 4) {
-            document.getElementById('task-five-label').innerHTML = listOfTasks[4];
-        }
-    }
-    
-    });
-
+    display();
+})
  
 
+function display (){
+    listOfTasks.push(task.innerHTML);
+   document.body.appendChild(box);
+   box.appendChild(header)
+   box.appendChild(taskBox);
+   header.appendChild(text)
+   box.style.width = '260px'
+   box.style.backgroundColor = "#f3f2f2";
+   box.style.marginTop = "20px"
+   box.style.padding = "10px"
+   box.style.borderRadius = "6px"
+   header.style.fontSize = "18px";
+   taskBox.style.padding = "6px"
+   taskBox.style.borderRadius = "6px"
+   taskBox.style.backgroundColor = "#00c278"
+   
+}
