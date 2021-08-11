@@ -1,32 +1,52 @@
 let listOfTasks = []
-const save = document.querySelector('button');
-const box = document.createElement('div');
-const header = document.createElement('h1')
-const text = document.createTextNode("Today's Task")
-const taskBox = document.createElement('section')
-const task = document.createElement('p')
+const input = document.getElementById('tasks');
+const save = document.querySelector('.save')
+const taskBox = document.querySelector('.task-container')
 
-save.addEventListener('click', (e)=> {
+
+    
+
+save.addEventListener('click', display)
+
+
+function display(e){
     e.preventDefault();
+    
+    
+    // Adding toDoDiv
+    const toDo = document.createElement('div')
+    toDo.classList.add('toDoDiv')
+    taskBox.appendChild(toDo);
+    
+    // Adding Text to the Div
+    let task = document.createElement('p')
+    task.classList.add('task')
+    task.innerText = input.value
+    toDo.appendChild(task)
+    if(task.innerText == "") {
+        return task.innerText = "Please enter a task"
+    }
+    
 
-    display();
-})
- 
+    // Add delete button
+    let removeBtn = document.createElement('button');
+    removeBtn.innerText = "remove"
+    removeBtn.classList.add('removeBtn')
+    toDo.appendChild(removeBtn)
+    removeBtn.addEventListener('click', ()=> {
+        toDo.style.display ="none"
+    })
 
-function display (){
-    listOfTasks.push(task.innerHTML);
-   document.body.appendChild(box);
-   box.appendChild(header)
-   box.appendChild(taskBox);
-   header.appendChild(text)
-   box.style.width = '260px'
-   box.style.backgroundColor = "#f3f2f2";
-   box.style.marginTop = "20px"
-   box.style.padding = "10px"
-   box.style.borderRadius = "6px"
-   header.style.fontSize = "18px";
-   taskBox.style.padding = "6px"
-   taskBox.style.borderRadius = "6px"
-   taskBox.style.backgroundColor = "#00c278"
-   
+    // Add complete button
+    let completeBtn = document.createElement('button');
+    completeBtn.innerText = "done"
+    completeBtn.classList.add('completeBtn')
+    toDo.appendChild(completeBtn)
+    completeBtn.addEventListener('click', ()=> {
+        task.style.textDecoration = "line-through"
+    })
+
+    
+
+
 }
