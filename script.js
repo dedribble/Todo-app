@@ -44,6 +44,7 @@ function display(e){
     toDo.appendChild(completeBtn)
     completeBtn.addEventListener('click', ()=> {
         task.style.textDecoration = "line-through"
+        completeBtn.style.backgroundColor = "#ccc"
     })
 
     
